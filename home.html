@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>IT Reacquistion Poratal</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">      
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>           
+  </head>
+
+  <body>
+
+     <nav>
+    <div class="nav-wrapper">
+      <a  href="#" class="brand-logo center">Online IT Assets Reacquistion Portal </a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="dash.html">Dashboard</a></li>
+        <li class="active"><a href="collapsible.html">Issues</a></li>
+      </ul>
+    </div>
+  </nav>
+<br>
+    <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Harry" id="first_name" type="text" class="validate">
+          <label for="first_name">First Name <span size="+2" style="color:red;">*</span></label>
+        </div>
+        <div class="input-field col s6">
+          <input placeholder="Potter" id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="sfid" type="text" class="validate">
+          <label for="sfid">SFID</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="designation" type="text" class="validate">
+          <label for="designation">Designation</label>
+        </div>
+      </div>
+    </form>
+  </div>
+<div class="input-field col s12">
+    <select single>
+        <option value="" disabled selected>Choose your option</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+    </select>
+    <label>Issue to be reported</label>
+</div>
+
+<div align="center">
+ <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+</div>
+        
+   </body>
+         <style>
+    .required input:after { content:"*"; }
+</style>  
+   <script>
+   $(document).ready(function() {
+    $('select').material_select();
+});</script>
+</html>
