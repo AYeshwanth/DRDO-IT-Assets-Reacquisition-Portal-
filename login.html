@@ -11,16 +11,16 @@
 
     <div class="login-page">
   <div class="form">
-    <form class="register-form">
+<!--    <form class="register-form">
       <input type="text" placeholder="name" />
       <input type="password" placeholder="password" />
       <input type="text" placeholder="email address" />
       <button>create</button>
       <p class="message">Already registered? <a href="#">Sign In</a></p>
-    </form>
-    <form class="login-form">
-      <input type="text" placeholder="username" />
-      <input type="password" placeholder="password" />
+    </form> -->
+    <form class="login-form" action="connect.php" method="post">
+      <input type="text" placeholder="username" name="user" />
+      <input type="password" placeholder="password" name="pass"/>
       <button><a href="home.html">Login</a></button>
       <p><a class="message" href="#">Forgot your password?</a></p>
     </form>
