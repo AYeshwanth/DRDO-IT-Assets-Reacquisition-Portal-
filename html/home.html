@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>IT Reacquistion Poratal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">      
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>           
+  </head>
+
+  <body>
+
+     <nav>
+    <div class="nav-wrapper">
+      <a  href="#" class="brand-logo center">Online IT Assets Reacquistion Portal </a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="dash.html">Dashboard</a></li>
+        <li class="active"><a href="collapsible.html">Issues</a></li>
+      </ul>
+    </div>
+  </nav>
+<br>
+    <div class="row">
+    <form class="col s12" name = "myForm"  action="../php/test.php" method="POST"">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Harry" id="first_name" name="first_name" type="text" required>
+          <label for="first_name">First Name <span size="+2" style="color:red;">*</span></label>
+        </div>
+        <div class="input-field col s6">
+          <input placeholder="Potter" id="last_name" name="second_name" type="text" required>
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="sfid" type="text" name="sfid" reqiured>
+          <label for="sfid">SFID</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="designation" type="text" name="designation" class="validate" required>
+          <label for="designation">Designation</label>
+        </div>
+      </div>
+    <label>Issue to be reported</label>
+    <p>
+      <input type="checkbox" class="filled-in" id="filled-in-box" name="problem[]" value="option1"/>
+      <label for="filled-in-box">Option 1</label>
+    </p>
+    <p>
+      <input type="checkbox" class="filled-in" id="filled-in-box 2" name="problem[]" value="option2" />
+      <label for="filled-in-box 2">Option 2</label>
+    </p>
+    <p>
+      <input type="checkbox" class="filled-in" id="filled-in-box 3" name="problem[]" value="option3"/>
+      <label for="filled-in-box 3">Option 3</label>
+    </p>
+
+</div>
+<div align="center">
+ <button class="btn waves-effect waves-light" type="submit" name="submit" onclick="checkscript()">Submit
+    <i class="material-icons right">send</i>
+  </button>
+</div>
+</form>      
+   </body>
+         <style>
+    .required input:after { content:"*"; }
+</style>  
+   <script>
+   $(document).ready(function() {
+    $('select').material_select();
+});
+
+  function checkscript() {
+      for (i=0;i<5;i++) {
+        box = document.myForm.elements[i];
+        if (!box.value) {
+        alert('You haven\'t filled in ' + box.name + '!');
+        box.focus()
+        return false;
+      }
+    }
+    return true;
+  }
+
+
+</script>
+</html>

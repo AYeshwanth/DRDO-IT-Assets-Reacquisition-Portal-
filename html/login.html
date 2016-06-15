@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>IT Portal Login</title>
+      <head>
+<link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>           
+  </head>
+
+  <body>
+
+    <div class="login-page">
+  <div class="form">
+<!--    <form class="register-form">
+      <input type="text" placeholder="name" />
+      <input type="password" placeholder="password" />
+      <input type="text" placeholder="email address" />
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form> -->
+
+    <form class="login-form" name="myForm" action="../php/connect.php" onsubmit="return validateForm()" method="POST">
+      <input type="text" placeholder="username" name="user"  />
+      <input type="password" placeholder="password" name="pass" />
+      <button><a href="home.html">Login</a></button>
+     
+    </form>
+  </div>
+</div>
+
+
+
+   </body>
+   <script>
+   $('.message a').click(function(){
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+    });
+
+   function validateForm() {
+    var x = document.forms["myForm"]["user"].value;
+    if (x == null || x == "") {
+        alert("username must be filled out");
+        return false;
+    }
+  }
+
+  
+
+</script>
+</html>
